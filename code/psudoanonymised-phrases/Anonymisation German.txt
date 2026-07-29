@@ -1,0 +1,49 @@
+Mein Name ist <Name>
+Ich heiße <Name>
+Du kannst mich <Name> nennen
+Sie können mich <Name> nennen
+Ich werde <Name> genannt
+Ich werde lieber <Name> genannt
+Mein voller Name ist <Name>
+Mein Vorname ist <Name>
+Mein Nachname ist <Name>
+Mein Familienname ist <Name>
+Mein Rufname ist <Name>
+
+Ich bin <Alter> Jahre alt
+Mein Alter ist <Alter>
+Ich wurde <Jahr> geboren
+Ich wurde im Jahr <Jahr> geboren
+Ich wurde in <Ort> geboren
+Ich wurde am <Datum> in <place> geboren
+Mein Geburtsdatum ist <Datum>
+
+Ich komme ursprünglich aus <Ort>
+Ich komme aus <Ort>
+Ich bin in <Ort> aufgewachsen
+Ich wohne derzeit in <Ort>
+Ich wohne in <Ort>
+Ich lebe derzeit in <Ort>
+Ich bin in <Ort> ansässig
+Ich habe meinen Wohnsitz in <Ort>
+Ich bin gerade nach <Ort> gezogen
+Ich lebe seit <Zeit> in <Ort>
+Meine Postleitzahl ist <Nummer>
+
+Ich arbeite für <Organisation>
+Ich arbeite bei <Organisation>
+Ich bin bei <Organisation> angestellt
+
+Ich studiere an <Universität>
+
+Meine Staatsangehörigkeit ist <Nationalität>
+Ich habe die <Nationalität> Staatsbürgerschaft
+Ich besitze die <Nationalität> Staatsangehörigkeit
+
+Meine Telefonnummer ist <Nummer>
+Meine Nummer ist <Nummer>
+Meine Handynummer ist <Nummer>
+Meine Mobilnummer ist <Nummer>
+Meine E‑Mail‑Adresse ist <E-mail>
+Meine Email ist <E-mail>
+Mein Benutzername ist <Name>

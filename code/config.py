@@ -104,9 +104,9 @@ End of the interview: If you have asked all the questions, or if the interviewee
 
 # Pre-written closing messages for codes
 CLOSING_MESSAGES = {}
-CLOSING_MESSAGES["5j3k"] = "Thank you very much for your participation; the interview is now concluded."
+CLOSING_MESSAGES["5j3k"] = "Vielen Dank. Der Chat ist nicht mehr verfügbar."
 CLOSING_MESSAGES["x7y8"] = (
-    "Thank you very much for taking part in this interview. That was the last question. Please continue with the remaining sections in the questionnaire part. Thank you for your answers and for the time you have devoted to this research project!"
+    "Vielen Dank. Sie haben angegeben, den Chat nicht fortsetzen zu wollen, und können keine neuen Nachrichten mehr senden."
 )
 
 # Function tools for OpenAI/Azure — replace code-based termination to avoid content-filter false positives
@@ -116,8 +116,8 @@ TERMINATION_TOOLS = [
         "function": {
             "name": "end_interview",
             "description": (
-                "Use this function when the interviewee has rated the summary, or when "
-                "the interviewee does not wish to continue the interview."
+                "Use this function when the participant explicitly mentions"
+                "that they not wish to continue the chat."
             ),
             "parameters": {"type": "object", "properties": {}, "required": []},
         },

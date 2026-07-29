@@ -66,8 +66,8 @@ except Exception as e:
 
 if cfg.variant is None:
     st.markdown(
-        "You have opened the wrong web page. This is an error. "
-        "Please close this page and report the problem in your survey."
+        "
+"
     )
     st.stop()
 
@@ -564,7 +564,7 @@ if not st.session_state.messages:
                     st.session_state.username, _api_request_ms,
                 )
                 message_placeholder.markdown(
-                    "I must follow the study instructions exactly and cannot comply with that request."
+                    "Ich muss mich genau an die Anweisungen der Studie halten und kann dieser Bitte daher nicht nachkommen."
                 )
                 st.rerun()
             raise
