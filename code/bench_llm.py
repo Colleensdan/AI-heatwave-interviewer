@@ -9,7 +9,7 @@ Run from the `code/` directory:
 
     python bench_llm.py                 # 5 runs (default)
     python bench_llm.py --runs 10
-    python bench_llm.py --message "Hallo, ja das stimmt."
+    python bench_llm.py --message "Hello, yes that's right."
 
 Run from Render's web shell to compare Render-network vs your-laptop-network
 to the same API endpoint.
@@ -89,7 +89,7 @@ def main():
     parser.add_argument("--runs", type=int, default=5, help="Number of runs (default: 5)")
     parser.add_argument(
         "--message",
-        default="Hallo, ich beginne gern mit dem Interview.",
+        default="Hello, I'm happy to start the interview.",
         help="User message to send.",
     )
     args = parser.parse_args()

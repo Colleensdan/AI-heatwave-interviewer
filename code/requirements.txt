@@ -7,4 +7,4 @@ requests>=2.31.0
 # The app uses PhrasePseudonymizer (pure-Python regex) by default.
 # To use InterviewPseudonymizer (spaCy NER), install manually:
 #   pip install spacy numpy
-#   python -m spacy download de_core_news_sm
+#   python -m spacy download en_core_web_sm

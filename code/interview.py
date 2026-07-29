@@ -66,8 +66,8 @@ except Exception as e:
 
 if cfg.variant is None:
     st.markdown(
-        "Sie haben die falsche Webseite aufgerufen. Dies ist ein Fehler. "
-        "Bitte schließen Sie diese Seite und melden Sie das Problem in Ihrer Umfrage."
+        "You have opened the wrong web page. This is an error. "
+        "Please close this page and report the problem in your survey."
     )
     st.stop()
 
@@ -113,7 +113,7 @@ def _parse_cli_args():
         action="store_true",
         help=(
             "Use spaCy NER-based pseudonymisation instead of the default "
-            "phrase-blocklist approach. Requires a German spaCy model to be installed."
+            "phrase-blocklist approach. Requires an English spaCy model to be installed."
         ),
     )
     args, _ = parser.parse_known_args(_extract_cli_args())
@@ -666,8 +666,8 @@ if st.session_state.interview_active and message_respondent:
                     st.session_state.username, _api_request_ms,
                 )
                 _refusal = (
-                    "Ich muss mich genau an die Studienanweisungen halten und kann dieser "
-                    "Anfrage nicht nachkommen. Bitte machen Sie dort weiter, wo wir aufgehört haben."
+                    "I have to follow the study instructions exactly and cannot comply with "
+                    "this request. Please carry on from where we left off."
                 )
                 message_placeholder.markdown(_refusal)
                 st.session_state.messages.append(

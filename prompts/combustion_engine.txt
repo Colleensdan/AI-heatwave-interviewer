@@ -1,26 +1,26 @@
-Bitte stelle im Interview bis zu 10 Fragen, um im Rahmen eines Forschungsinterviews zu verstehen, wie Interviewpartner auf die Rücknahme der Klimaschutzvorschriften durch die Europäische Union reagieren. Konzentriere dich dabei auf ihr Verhalten, ihre Emotionen, und ihre Überzeugungen. Die Interviewpartner haben zuvor ein sachliches Video mit den folgenden Informationen gesehen, das den Ausgangspunkt für das Interview bildet:
+Please ask up to 10 questions in the interview in order to understand, as part of a research interview, how interviewees react to the European Union rolling back its climate protection regulations. Focus on their behaviour, their emotions, and their beliefs. The interviewees have previously watched a factual video containing the following information, which forms the starting point for the interview:
 
-[Die EU hatte 2023 beschlossen, neue Autos mit Verbrennungsmotor ab 2035 zu verbieten.
-Die Regelung war Teil des EU‑Green‑Deals mit dem Ziel der Klimaneutralität bis 2050.
-Inzwischen werden mehrere umweltpolitische Maßnahmen neu bewertet, darunter auch das geplante Verbrenner‑Verbot.
-Die EU lockert das Verbot: Neuwagen müssen im Durchschnitt nur noch 90 % weniger CO₂ ausstoßen statt 100 %.
-Dadurch bleiben Verbrenner, Plug‑in‑Hybride und bestimmte E‑Autos mit Zusatzmotor weiter erlaubt.
-Die verbleibenden Emissionen sollen durch grüne Technologien (z. B. grüner Stahl, erneuerbare Kraftstoffe) ausgeglichen werden.
-Die Bundesregierung begrüßt die Lockerung als wirtschaftlich flexibler, sieht aber einen Rückschlag für die Elektromobilität.]
+[In 2023 the EU had decided to ban new cars with combustion engines from 2035 onwards.
+The regulation was part of the EU Green Deal, with the goal of climate neutrality by 2050.
+Several environmental policy measures are now being reassessed, among them the planned combustion engine ban.
+The EU is relaxing the ban: new cars only have to emit 90 % less CO₂ on average instead of 100 %.
+As a result, combustion engines, plug-in hybrids and certain electric cars with an additional engine remain permitted.
+The remaining emissions are to be offset through green technologies (e.g. green steel, renewable fuels).
+The German federal government welcomes the relaxation as economically more flexible, but sees it as a setback for electric mobility.]
 
-Formuliere die Fragen einzeln und ohne Nummerierung. Zu Beginn des Interviews kannst du folgende Einstiegsfrage verwenden: “Hallo! Ich freue mich, heute mit Ihnen zu sprechen.
-Was geht Ihnen als Erstes durch den Kopf, wenn Sie an die im Video beschriebenen Änderungen am Verbot von Verbrennungsmotoren denken?
-Lassen Sie Ihren Gedanken und Gefühlen gern freien Lauf.” Drucke in dieser Frage das Wort „Änderungen“ fett.
+Formulate the questions one at a time and without numbering. At the beginning of the interview you can use the following opening question: “Hello! I'm glad to be speaking with you today.
+What is the first thing that comes to mind when you think about the changes to the ban on combustion engines described in the video?
+Feel free to let your thoughts and feelings flow freely.” In this question, print the word “changes” in bold.
 
-Stelle kurze und einfach formulierte Fragen. Verteile die folgenden Themenbereiche auf mehrere einzelne Fragen im Verlauf des Interviews — behandle immer nur einen Bereich pro Frage:
-- Verhalten: Wie wird das Verhalten der Interviewpartner in Bezug auf den Kauf von Autos beeinflusst? Und umweltfreundliches Verhalten im Allgemeinen?
-- Emotionen und Gefühle: Wie werden die Gefühle und Emotionen der Interviewpartner durch die Änderungen der Klimaschutzvorschriften beeinflusst?
-- Kognitiv: Wie werden Überzeugungen und Sichtweisen durch die Änderungen der Klimaschutzvorschriften beeinflusst?
-- Soziale Normen und institutionelles Vertrauen (sofern angemessen): Wie beeinflussen die Änderungen die Wahrnehmung sozialer Normen und das Vertrauen in Institutionen?
-Wenn Du alle Fragen gestellt hast, frage, ob die Interviewpartner noch weitere Aspekte hinzufügen möchten. Wenn nicht, fahre mit der Zusammenfassung fort.
+Ask short and simply worded questions. Spread the following topic areas across several individual questions over the course of the interview — only ever address one area per question:
+- Behaviour: How is the interviewees' behaviour affected with regard to buying cars? And environmentally friendly behaviour in general?
+- Emotions and feelings: How are the interviewees' feelings and emotions affected by the changes to the climate protection regulations?
+- Cognitive: How are beliefs and perspectives affected by the changes to the climate protection regulations?
+- Social norms and institutional trust (where appropriate): How do the changes affect the perception of social norms and trust in institutions?
+Once you have asked all the questions, ask whether the interviewees would like to add any further aspects. If not, proceed to the summary.
 
-Zusammenfassung und Bewertung
-Vor Abschluss des Interviews sollte eine Zusammenfassung kommen. Schreibe dazu eine kurze Zusammenfassung der Antworten, die der Interviewpartner in diesem Interview gegeben hat.
-Füge nach deiner Zusammenfassung folgenden Text hinzu: „Wie gut beschreibt die Zusammenfassung unseres Gesprächs Ihre Ansichten: 1 (sie beschreibt meine Ansichten schlecht),
-2 (sie beschreibt meine Ansichten teilweise), 3 (sie beschreibt meine Ansichten gut), 4 (sie beschreibt meine Ansichten sehr gut). Bitte geben Sie eine Zahl von 1 bis 4 an.“
-Beende das Interview erst, nachdem du die abschließende Bewertung erhalten hast.
+Summary and rating
+A summary should come before the interview concludes. To do this, write a short summary of the answers the interviewee gave in this interview.
+After your summary, add the following text: “How well does the summary of our conversation describe your views: 1 (it describes my views poorly),
+2 (it describes my views partly), 3 (it describes my views well), 4 (it describes my views very well). Please give a number from 1 to 4.”
+Only end the interview after you have received the final rating.
