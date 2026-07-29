@@ -136,18 +136,20 @@ The upload layer (`code/sharepoint.py`) retries up to three times with exponenti
 
 ### Permissions and choosing a destination
 
-The app authenticates as an **application** (client-credentials flow), so its access comes from Microsoft Graph *application permissions* on the app registration — either `Sites.Selected` (granted per site by an admin) or `Sites.ReadWrite.All` (tenant-wide).
+The app authenticates as an **application** (client-credentials flow), so its access comes from Microsoft Graph *application permissions* on the app registration. This app (`Personal-streamlit-sharepoint-ingest`) holds exactly one: **`Sites.Selected`**, granted per site by an admin.
 
-**Graph has no folder-level application permission.** Access is never scoped to a single folder such as `InterviewData`; it is scoped to the whole **site**. Every library and folder within that site is therefore equally readable and writable, and pointing the app at a new folder needs no new permission grant.
+**Graph has no folder-level application permission.** Access is never scoped to a single folder such as `InterviewData`; it is scoped to the whole **site**. Every library and folder within that site is equally readable and writable, so pointing the app at a new folder needs no new permission grant.
 
-That gives two workable destinations:
+That gives two possible destinations:
 
-| Destination | Configuration | Setup required |
+| Destination | Configuration | Status |
 |---|---|---|
-| **Folder inside the existing library** (default) | `SP_LIBRARY_NAME=InterviewData`, `SP_TARGET_FOLDER=Heatwave` | None — created on first upload |
-| **Dedicated `Heatwave` document library** | `SP_LIBRARY_NAME=Heatwave`, `SP_TARGET_FOLDER=incoming` | Create the library in the SharePoint UI first |
+| **Folder inside the existing library** (in use) | `SP_LIBRARY_NAME=InterviewData`, `SP_TARGET_FOLDER=Heatwave` | Works today — folder created on first upload |
+| **Dedicated `Heatwave` document library** | `SP_LIBRARY_NAME=Heatwave`, `SP_TARGET_FOLDER=incoming` | Needs an admin to create the library first |
 
-The second option is fully supported by the same permissions, but this app will not create a document library — `_get_drive_id` raises `Library 'Heatwave' not found` if it does not exist yet. Create it in the SharePoint UI, then switch the variable.
+The `Sites.Selected` grant here is at **write** level, not `manage` or `fullcontrol`. Reading and writing files anywhere in the site works, but creating a new document library does not: `POST /sites/{id}/lists` returns `403 accessDenied`. This app cannot create a library, and `_get_drive_id` raises `Library 'Heatwave' not found` if one is named but absent.
+
+A dedicated library therefore requires an admin to create it in the SharePoint UI; the existing grant then covers reading and writing it, and only `SP_LIBRARY_NAME` needs changing. Until then the folder-in-library layout above is the working arrangement.
 
 To confirm the destination is writable before running interviews:
 
