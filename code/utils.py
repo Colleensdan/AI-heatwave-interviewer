@@ -123,8 +123,8 @@ def save_interview_data(
     `EntityMapping` objects in the order they were first observed.
 
     If `variant` is provided (e.g. "combustion", "deforestation") files are
-    uploaded to SharePoint under incoming/{variant}/{subfolder}/ so data from
-    different interview variants is kept separate.
+    uploaded to SharePoint under SP_TARGET_FOLDER/{variant}/{subfolder}/ so data
+    from different interview variants is kept separate.
 
     `messages` and `start_time` must be passed when calling from a background thread
     (which has no Streamlit ScriptRunContext). When omitted they are read from
@@ -169,7 +169,7 @@ def save_interview_data(
     _local_ms = (time.perf_counter() - _t_local_start) * 1000
 
     # Upload to SharePoint (non-fatal: log + flag but do not interrupt the interview).
-    # Path: incoming/{variant}/{data-type}/ mirroring the local data/ layout.
+    # Path: SP_TARGET_FOLDER/{variant}/{data-type}/ mirroring the local data/ layout.
     _sp_configured = _sp._sp_configured()
     _sp_total_ms = -1.0
     _sp_status = "skipped"

@@ -116,21 +116,46 @@ When hosted on Render, interview data is written to **both** the server's local 
 
 | When | What is saved |
 |---|---|
-| Immediately after the first interviewer message | Backup transcript + times → `incoming/backups/` |
-| After **every** subsequent assistant message | Backup transcript + times → `incoming/backups/` |
-| Interview end (closing code or Quit) | Final transcript → `incoming/transcripts/`, times → `incoming/times/` |
+| Immediately after the first interviewer message | Backup transcript + times → `Heatwave/backups/` |
+| After **every** subsequent assistant message | Backup transcript + times → `Heatwave/backups/` |
+| Interview end (closing code or Quit) | Final transcript → `Heatwave/transcripts/`, times → `Heatwave/times/` |
 
 The folder layout in SharePoint mirrors the local `data/` directory:
 
 ```
-InterviewData/
-└── incoming/
-    ├── transcripts/   ← final transcripts only
-    ├── times/         ← final time files only
-    └── backups/       ← incremental backups after every message
+InterviewData/            ← SP_LIBRARY_NAME
+└── Heatwave/             ← SP_TARGET_FOLDER
+    ├── transcripts/      ← final transcripts only
+    ├── times/            ← final time files only
+    └── backups/          ← incremental backups after every message
 ```
 
+Heatwave interview data is kept in its own `Heatwave/` folder, separate from other studies in the same library. Graph creates the folder automatically on the first upload — no manual setup needed.
+
 The upload layer (`code/sharepoint.py`) retries up to three times with exponential backoff before giving up, so transient network blips recover automatically. All failures are written to stderr and appear in Render's log dashboard.
+
+### Permissions and choosing a destination
+
+The app authenticates as an **application** (client-credentials flow), so its access comes from Microsoft Graph *application permissions* on the app registration — either `Sites.Selected` (granted per site by an admin) or `Sites.ReadWrite.All` (tenant-wide).
+
+**Graph has no folder-level application permission.** Access is never scoped to a single folder such as `InterviewData`; it is scoped to the whole **site**. Every library and folder within that site is therefore equally readable and writable, and pointing the app at a new folder needs no new permission grant.
+
+That gives two workable destinations:
+
+| Destination | Configuration | Setup required |
+|---|---|---|
+| **Folder inside the existing library** (default) | `SP_LIBRARY_NAME=InterviewData`, `SP_TARGET_FOLDER=Heatwave` | None — created on first upload |
+| **Dedicated `Heatwave` document library** | `SP_LIBRARY_NAME=Heatwave`, `SP_TARGET_FOLDER=incoming` | Create the library in the SharePoint UI first |
+
+The second option is fully supported by the same permissions, but this app will not create a document library — `_get_drive_id` raises `Library 'Heatwave' not found` if it does not exist yet. Create it in the SharePoint UI, then switch the variable.
+
+To confirm the destination is writable before running interviews:
+
+```bash
+python code/check_sharepoint.py
+```
+
+This resolves the site and library, uploads a small `_write_check.txt` probe to the configured folder, and prints the full path. Delete the probe file afterwards.
 
 ### Setting environment variables on Render
 
@@ -148,8 +173,8 @@ The upload layer (`code/sharepoint.py`) retries up to three times with exponenti
 | `CLIENT_SECRET` | App registration client secret |
 | `SP_HOSTNAME` | SharePoint hostname (e.g. `yourorg.sharepoint.com`) |
 | `SP_SITE_PATH` | Site-relative path (e.g. `/sites/MySite`) |
-| `SP_LIBRARY_NAME` | Document library name (e.g. `InterviewData`) |
-| `SP_TARGET_FOLDER` | Target folder within the library (e.g. `incoming`) |
+| `SP_LIBRARY_NAME` | Document library name (`InterviewData`) |
+| `SP_TARGET_FOLDER` | Target folder within the library (`Heatwave`) |
 
 You also need the Azure OpenAI variables on Render for the same reason:
 
