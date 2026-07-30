@@ -66,8 +66,8 @@ except Exception as e:
 
 if cfg.variant is None:
     st.markdown(
-        "
-"
+         "Sie haben die falsche Webseite aufgerufen. Dies ist ein Fehler. "
+        "Bitte schließen Sie diese Seite und melden Sie das Problem in Ihrer Umfrage."
     )
     st.stop()
 
