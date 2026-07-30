@@ -18,12 +18,8 @@ C | gutes Essen, Natur, Aktivitäten
 Welchen Ort sollten die drei gemeinsam wählen, sodass für jede Person mindestens zwei ihrer wichtigen Faktoren erfüllt sind?]
 
 Dies ist das andere Problem:
-[Bei einer Hochzeit sollen sieben Personen an einem runden Tisch mit sieben Plätzen (im Uhrzeigersinn mit 1 bis 7 nummeriert) platziert werden: Braut, Bräutigam, Mutter der Braut, Vater der Braut, Mutter des Bräutigams, Vater des Bräutigams, Trauzeuge.
-Die Braut sitzt bereits auf Platz 1. Ordnen Sie die übrigen sechs Personen so an, dass alle folgenden Bedingungen erfüllt sind:
-- Der Bräutigam sitzt auf dem Platz unmittelbar im Uhrzeigersinn nach der Braut (also auf Platz 2).
-- Der Trauzeuge sitzt unmittelbar neben dem Bräutigam.
-- Die Mutter der Braut und die Mutter des Bräutigams sitzen nicht nebeneinander.
-- Der Vater der Braut und der Vater des Bräutigams sitzen nicht nebeneinander.]
+[In dieser Aufgabe sollen Sie die Sitzordnung bei einer Hochzeitsfeier festlegen. Sieben Personen sollen an einem runden Tisch bei einer Hochzeitsfeier platziert werden. Das Paar möchte, dass die Braut links vom Bräutigam sitzt (Platz 2), weil das ihrer Meinung nach auf den Fotos besser aussieht. Außerdem muss der Bräutigam neben seinem Trauzeugen sitzen. Die Eltern der Braut und die Eltern des Bräutigams sollen jedoch nicht nebeneinander sitzen. Wie sollten die Gäste um den Tisch herum angeordnet werden, damit alle diese Bedingungen erfüllt sind? Doch was passiert, wenn auch der Pastor an diesen Tisch eingeladen wird?
+Die Braut hat sich bereits an den Tisch gesetzt. Nun müssen Sie die übrigen Personen anordnen.]
 
 
 Den Teilnehmenden steht es frei, deine Hilfe in Anspruch zu nehmen oder nicht. Beantworte daher ihre Fragen. Bevor Du die richtige Lösung gibst, frage immer erst ob die Person lieber Hilfestellung möchte oder direkt die richtige Antwort.
