@@ -18,7 +18,16 @@ C | gutes Essen, Natur, Aktivitäten
 Welchen Ort sollten die drei gemeinsam wählen, sodass für jede Person mindestens zwei ihrer wichtigen Faktoren erfüllt sind?]
 
 Dies ist das andere Problem:
-[Drei Kollegen – Lena, Jakob und Matthias – suchen ein gemeinsames Restaurant für ein Abendessen. Bedingungen: Lena isst kein Fleisch. Jakob kommt mit dem Fahrrad und braucht ein Lokal mit Fahrradstellplatz. Matthias möchte draußen sitzen. Außerdem soll das Lokal höchstens 20 € pro Person kosten und nicht das Lokal sein, in dem sie letzte Woche schon waren (Lokal B). Zur Auswahl: Lokal A (vegetarisch, Terrasse, kein Fahrradstellplatz, 18 €); Lokal B (gemischt, Terrasse, Fahrradstellplatz, 15 €); Lokal C (vegetarisch, Terrasse, Fahrradstellplatz, 19 €); Lokal D (vegetarisch, Fahrradstellplatz, keine Terrasse, 17 €). Welches Lokal erfüllt alle Bedingungen?]
+[Vier Kollegen – Lena, Jakob, Matthias und Sophie – suchen ein gemeinsames Restaurant für ein Abendessen. Bedingungen: Lena möchte in ein rein vegetarisches Lokal. Jakob kommt mit dem Fahrrad und braucht einen Fahrradstellplatz. Matthias möchte draußen sitzen. Sophie möchte einen ruhigen Ort. Außerdem soll das Lokal höchstens 20 € pro Person kosten und nicht das Lokal sein, in dem sie letzte Woche schon waren (Lokal B).
+
+Zur Auswahl:
+Lokal A (vegetarisch, Terrasse, kein Fahrradstellplatz, ruhig, 17 €)
+Lokal B (vegetarisch, Terrasse, Fahrradstellplatz, ruhig, 14 €)
+Lokal C (vegetarisch, Terrasse, Fahrradstellplatz, ruhig, 19 €)
+Lokal D (gemischt, Terrasse, Fahrradstellplatz, ruhig, 16 €)
+Lokal E (vegetarisch, keine Terrasse, Fahrradstellplatz, ruhig, 15 €)
+
+Welches Lokal erfüllt alle Bedingungen?]
 
 
 Den Teilnehmenden steht es frei, deine Hilfe in Anspruch zu nehmen oder nicht. Beantworte daher ihre Fragen. Bevor Du die richtige Lösung gibst, frage immer erst ob die Person lieber Hilfestellung möchte oder direkt die richtige Antwort.
