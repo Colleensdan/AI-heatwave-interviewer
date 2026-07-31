@@ -18,8 +18,7 @@ C | gutes Essen, Natur, Aktivitäten
 Welchen Ort sollten die drei gemeinsam wählen, sodass für jede Person mindestens zwei ihrer wichtigen Faktoren erfüllt sind?]
 
 Dies ist das andere Problem:
-[In dieser Aufgabe sollen Sie die Sitzordnung bei einer Hochzeitsfeier festlegen. Acht Personen sollen an einem runden Tisch bei einer Hochzeitsfeier platziert werden. Das Paar möchte, dass die Braut links vom Bräutigam sitzt (Platz 2), weil das ihrer Meinung nach auf den Fotos besser aussieht. Außerdem muss der Bräutigam neben seinem Trauzeugen sitzen. Die Eltern der Braut und die Eltern des Bräutigams sollen jedoch nicht nebeneinander sitzen. Wie sollten die Gäste um den Tisch herum angeordnet werden, damit alle diese Bedingungen erfüllt sind? Doch was passiert, wenn auch der Pastor an diesen Tisch eingeladen wird?
-Die Braut hat sich bereits an den Tisch gesetzt (Platz 1). Nun müssen Sie die übrigen Personen auf Platz 2 bis Platz 8 anordnen.]
+[Drei Kollegen – Lena, Jakob und Matthias – suchen ein gemeinsames Restaurant für ein Abendessen. Bedingungen: Lena isst kein Fleisch. Jakob kommt mit dem Fahrrad und braucht ein Lokal mit Fahrradstellplatz. Matthias möchte draußen sitzen. Außerdem soll das Lokal höchstens 20 € pro Person kosten und nicht das Lokal sein, in dem sie letzte Woche schon waren (Lokal B). Zur Auswahl: Lokal A (vegetarisch, Terrasse, kein Fahrradstellplatz, 18 €); Lokal B (gemischt, Terrasse, Fahrradstellplatz, 15 €); Lokal C (vegetarisch, Terrasse, Fahrradstellplatz, 19 €); Lokal D (vegetarisch, Fahrradstellplatz, keine Terrasse, 17 €). Welches Lokal erfüllt alle Bedingungen?]
 
 
 Den Teilnehmenden steht es frei, deine Hilfe in Anspruch zu nehmen oder nicht. Beantworte daher ihre Fragen. Bevor Du die richtige Lösung gibst, frage immer erst ob die Person lieber Hilfestellung möchte oder direkt die richtige Antwort.
