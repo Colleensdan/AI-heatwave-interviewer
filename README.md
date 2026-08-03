@@ -34,17 +34,25 @@ interview, as do `deforestation1`/`deforestation2`.
 Mapping (edit in `code/config.py`):
 
 ```
-arm              token           interview task
-combustion1      /?q=T5wp7       combustion
-combustion2      /?q=K8r3v       combustion
-deforestation1   /?q=D9k2m       deforestation
-deforestation2   /?q=M2x6b       deforestation
+arm              token           prompt file           condition
+combustion1      /?q=T5wp7       combustion1.txt       combustion
+combustion2      /?q=K8r3v       combustion2.txt       combustion
+deforestation1   /?q=D9k2m       deforestation1.txt    deforestation
+deforestation2   /?q=M2x6b       deforestation2.txt    deforestation
 ```
 
-Each arm writes to its own SharePoint folder, `SP_TARGET_FOLDER/{arm}/{transcripts|times|backups}/`,
-so the four URLs produce four separate data directories. The tokens for
-`combustion1` and `deforestation1` are unchanged from the earlier two-arm setup,
-so links already distributed remain valid and land in arm 1.
+Each arm has its own prompt file in `prompts/` and writes to its own SharePoint
+folder, `SP_TARGET_FOLDER/{arm}/{transcripts|times|backups}/`, so the four URLs
+produce four separate data directories.
+
+The two prompt files within a condition start as identical copies of the
+original outline, which is what keeps the study at two conditions. Editing one
+of them (e.g. to make `combustion2` harder) makes that arm a distinct condition
+in practice — `VARIANT_TASKS` in `code/config.py` records the intended grouping
+and should be updated to match if that happens.
+
+The tokens for `combustion1` and `deforestation1` are unchanged from the earlier
+two-arm setup, so links already distributed remain valid and land in arm 1.
 
 ## Security hardening
 

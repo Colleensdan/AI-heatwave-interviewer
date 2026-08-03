@@ -17,9 +17,8 @@ VARIANT_TOKENS = {
 }
 ALLOWED_VARIANTS = set(VARIANT_TOKENS.values())
 
-# Arm -> interview task (i.e. which outline the participant is asked about).
-# Two tasks only: arms sharing a task run an identical interview and differ
-# solely in where their transcripts are stored.
+# Arm -> experimental condition. Two conditions only. This records which arms
+# belong together for analysis; it does not select the prompt.
 VARIANT_TASKS = {
     "combustion1": "combustion",
     "combustion2": "combustion",
@@ -27,10 +26,13 @@ VARIANT_TASKS = {
     "deforestation2": "deforestation",
 }
 
-# Task -> outline file
-TASK_OUTLINES = {
-    "combustion": "combustion_engine.txt",
-    "deforestation": "deforestation.txt",
+# Arm -> outline file. Every arm has its own prompt file, so the two arms of a
+# condition can be edited independently. They start as identical copies.
+ARM_OUTLINES = {
+    "combustion1": "combustion1.txt",
+    "combustion2": "combustion2.txt",
+    "deforestation1": "deforestation1.txt",
+    "deforestation2": "deforestation2.txt",
 }
 
 @dataclass(frozen=True)
@@ -170,14 +172,13 @@ def build_system_prompts(variant: str) -> tuple:
     """Return (SYSTEM_PROMPT, SYSTEM_PROMPT_OPENAI) for the given arm.
 
     Called per-session from interview.py so the correct prompt is always used
-    regardless of which variant URL the participant arrived on. Arms mapping to
-    the same task (e.g. "combustion1" and "combustion2") get an identical
-    prompt; a bare task name is also accepted.
+    regardless of which variant URL the participant arrived on. Each arm reads
+    its own outline file, so editing one arm's prompt never affects the other
+    arm in the same condition.
     """
-    task = VARIANT_TASKS.get(variant, variant)
-    if task not in TASK_OUTLINES:
+    if variant not in ARM_OUTLINES:
         raise ValueError(f"Unknown variant: {variant!r}")
-    outline = (prompts_dir / TASK_OUTLINES[task]).read_text(encoding="utf-8")
+    outline = (prompts_dir / ARM_OUTLINES[variant]).read_text(encoding="utf-8")
 
     system_prompt = f"{outline}\n\n\n{GENERAL_INSTRUCTIONS}\n\n\n{CODES}"
     system_prompt_openai = f"{outline}\n\n\n{GENERAL_INSTRUCTIONS}"
