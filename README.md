@@ -26,12 +26,25 @@ The interview platform is built using the library `streamlit` and the APIs of Op
 
 The app selects interview variants using a nondescript query token instead of a descriptive name.
 
+There are **four arms** but only **two experimental conditions**. An arm determines
+where the data is stored; the condition (task) determines which interview outline
+the participant receives. Arms `combustion1`/`combustion2` run an identical
+interview, as do `deforestation1`/`deforestation2`.
+
 Mapping (edit in `code/config.py`):
 
 ```
-combustion     -> /?q=T5wp7
-deforestation  -> /?q=D9k2m
+arm              token           interview task
+combustion1      /?q=T5wp7       combustion
+combustion2      /?q=K8r3v       combustion
+deforestation1   /?q=D9k2m       deforestation
+deforestation2   /?q=M2x6b       deforestation
 ```
+
+Each arm writes to its own SharePoint folder, `SP_TARGET_FOLDER/{arm}/{transcripts|times|backups}/`,
+so the four URLs produce four separate data directories. The tokens for
+`combustion1` and `deforestation1` are unchanged from the earlier two-arm setup,
+so links already distributed remain valid and land in arm 1.
 
 ## Security hardening
 

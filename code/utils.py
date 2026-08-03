@@ -122,9 +122,10 @@ def save_interview_data(
     table outside of the persisted transcript. When provided it receives a list of
     `EntityMapping` objects in the order they were first observed.
 
-    If `variant` is provided (e.g. "combustion", "deforestation") files are
-    uploaded to SharePoint under SP_TARGET_FOLDER/{variant}/{subfolder}/ so data
-    from different interview variants is kept separate.
+    If `variant` (the arm, e.g. "combustion1", "deforestation2") is provided,
+    files are uploaded to SharePoint under SP_TARGET_FOLDER/{variant}/{subfolder}/
+    so data from each arm is kept separate — including arms that run the same
+    interview task.
 
     `messages` and `start_time` must be passed when calling from a background thread
     (which has no Streamlit ScriptRunContext). When omitted they are read from

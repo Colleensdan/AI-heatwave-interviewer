@@ -5,15 +5,45 @@ import streamlit as st
 from dataclasses import dataclass
 
 
+# Each URL token identifies an *arm*. Arms are the unit of data separation:
+# every arm gets its own SharePoint folder. Several arms can share the same
+# interview task (see VARIANT_TASKS), so the number of arms is independent of
+# the number of experimental conditions.
 VARIANT_TOKENS = {
-    "T5wp7": "combustion",
-    "D9k2m": "deforestation",
+    "T5wp7": "combustion1",
+    "K8r3v": "combustion2",
+    "D9k2m": "deforestation1",
+    "M2x6b": "deforestation2",
 }
 ALLOWED_VARIANTS = set(VARIANT_TOKENS.values())
 
+# Arm -> interview task (i.e. which outline the participant is asked about).
+# Two tasks only: arms sharing a task run an identical interview and differ
+# solely in where their transcripts are stored.
+VARIANT_TASKS = {
+    "combustion1": "combustion",
+    "combustion2": "combustion",
+    "deforestation1": "deforestation",
+    "deforestation2": "deforestation",
+}
+
+# Task -> outline file
+TASK_OUTLINES = {
+    "combustion": "combustion_engine.txt",
+    "deforestation": "deforestation.txt",
+}
+
 @dataclass(frozen=True)
 class AppConfig:
+    # Arm name (e.g. "combustion2") — determines the storage folder.
     variant: Optional[str]
+
+    @property
+    def task(self) -> Optional[str]:
+        """Interview task for this arm (e.g. "combustion"). Two tasks in total."""
+        if self.variant is None:
+            return None
+        return VARIANT_TASKS[self.variant]
 
 def _as_bool(v, default: bool) -> bool:
     if v is None:
@@ -137,17 +167,17 @@ TOOL_CLOSING_MESSAGES = {
 
 
 def build_system_prompts(variant: str) -> tuple:
-    """Return (SYSTEM_PROMPT, SYSTEM_PROMPT_OPENAI) for the given variant.
+    """Return (SYSTEM_PROMPT, SYSTEM_PROMPT_OPENAI) for the given arm.
 
     Called per-session from interview.py so the correct prompt is always used
-    regardless of which variant URL the participant arrived on.
+    regardless of which variant URL the participant arrived on. Arms mapping to
+    the same task (e.g. "combustion1" and "combustion2") get an identical
+    prompt; a bare task name is also accepted.
     """
-    if variant == "deforestation":
-        outline = (prompts_dir / "deforestation.txt").read_text(encoding="utf-8")
-    elif variant == "combustion":
-        outline = (prompts_dir / "combustion_engine.txt").read_text(encoding="utf-8")
-    else:
+    task = VARIANT_TASKS.get(variant, variant)
+    if task not in TASK_OUTLINES:
         raise ValueError(f"Unknown variant: {variant!r}")
+    outline = (prompts_dir / TASK_OUTLINES[task]).read_text(encoding="utf-8")
 
     system_prompt = f"{outline}\n\n\n{GENERAL_INSTRUCTIONS}\n\n\n{CODES}"
     system_prompt_openai = f"{outline}\n\n\n{GENERAL_INSTRUCTIONS}"
